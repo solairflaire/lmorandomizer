@@ -6,6 +6,7 @@ import {
 } from '../domains/util/scriptdat/format/scriptconverter';
 
 export default function randomize(
+  nativeLib: any,
   scriptDat: ArrayBuffer,
   supplementFiles: {
     weaponsYml: string;
@@ -33,5 +34,5 @@ export default function randomize(
       ],
     );
   }
-  return buildScriptDat(script);
+  return buildScriptDat(nativeLib, script);
 }

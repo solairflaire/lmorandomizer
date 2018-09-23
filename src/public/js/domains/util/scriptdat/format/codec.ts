@@ -3,7 +3,7 @@ import iconv from 'iconv-lite';
 
 const KEY = 0b01100001;
 
-const CODE_MAP: ReadonlyArray<Readonly<{
+export const CODE_MAP: ReadonlyArray<Readonly<{
   code: number;
   char: string;
 }>> = (() => {
@@ -50,9 +50,9 @@ export function decode(bin: ArrayBuffer) {
   return str;
 }
 
-export function encode(txt: string, len: number, buf: Uint8Array) {
+export function encode(nativeLib: any, txt: string, len: number, buf: Uint8Array) {
   for (let i = 0; i < txt.length; i += 1) {
-    buf[i] = toCode(txt.charAt(i)) ^ KEY;
+    buf[i] = toCode(nativeLib, txt.charAt(i)) ^ KEY;
   }
 }
 
@@ -60,16 +60,30 @@ export function textToShopData(text: string) {
   return Uint8Array.from(
     text
       .split('')
-      .map(toCode),
+      .map(x => js_toCode(x)),
   );
 }
 
-function toCode(char: string) {
+function js_toCode(char: string) {
   const code = CHAR_TO_CODE[char];
   if (code == null) {
     return iconv.encode(char, 'Shift_JIS')[0];
   }
   return code;
+}
+
+function toCode(nativeLib: any, char: string) {
+  const code: number = nativeLib.to_code(char.codePointAt(0));
+  if (code < 0) {
+    return iconv.encode(char, 'Shift_JIS')[0];
+  }
+  return code;
+
+  // const code = CHAR_TO_CODE[char];
+  // if (code == null) {
+  //   return iconv.encode(char, 'Shift_JIS')[0];
+  // }
+  // return code;
 }
 
 export function shopItemDataToText(shopItemData: Uint8Array) {

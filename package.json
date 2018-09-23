@@ -67,7 +67,7 @@
     "package": "electron-builder --win zip --mac zip --publish onTag",
     "release-build": "webpack --mode production --progress",
     "start": "electron .",
-    "wasm-build": "rustc --target wasm32-unknown-unknown -O rust-src/decode.rs --crate-type=cdylib --out-dir dist/public/wasm"
+    "wasm-build": "rustc --target wasm32-unknown-unknown -O src/lib.rs --crate-type=cdylib --out-dir dist/public/wasm"
   },
   "typings": "dist/index.d.ts"
 }

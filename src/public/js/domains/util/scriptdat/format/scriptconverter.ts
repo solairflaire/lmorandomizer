@@ -15,10 +15,10 @@ export function readScriptDat(file: ArrayBuffer) {
   return Script.parse(txt);
 }
 
-export function buildScriptDat(script: Script) {
+export function buildScriptDat(nativeLib: any, script: Script) {
   const str = script.stringify();
   const array = new Uint8Array(str.length);
-  encode(str, array.byteLength, array);
+  encode(nativeLib, str, array.byteLength, array);
   return array;
 }
 
