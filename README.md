@@ -2,7 +2,7 @@ La-Mulana (Original version) Randomizer
 ====
 
 [![Electron](https://img.shields.io/badge/powered%20by-Electron-blue.svg)](https://electronjs.org/)
-[![Build Status](https://travis-ci.org/progre/lmorandomizer.svg?branch=master)](https://travis-ci.org/progre/lmorandomizer) ![License](https://img.shields.io/github/license/progre/lmorandomizer.svg) [![Version](https://img.shields.io/github/release/progre/lmorandomizer/all.svg)](https://github.com/progre/lmorandomizer/releases)
+[![Build Status](https://travis-ci.org/progre/lmorandomizer.svg?branch=master)](https://travis-ci.org/progre/lmorandomizer) ![License](https://img.shields.io/github/license/progre/lmorandomizer.svg) [![Version](https://img.shields.io/github/release/progre/lmorandomizer/all.svg)](https://github.com/progre/lmorandomizer/releases) [![Greenkeeper badge](https://badges.greenkeeper.io/solairflaire/lmorandomizer.svg)](https://greenkeeper.io/)
 
 Randomizer for La-Mulana (Original version). Original game will be found in [Internet Archive](https://archive.org/details/La-Mulana)
 
