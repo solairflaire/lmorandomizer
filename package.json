@@ -32,7 +32,7 @@
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
-    "@progre/tslint-config": "~5.11.0",
+    "@progre/tslint-config": "5.10.0",
     "@progre/webpack-config": "^0.0.6",
     "@types/js-yaml": "^3.12.0",
     "@types/node": "^11.11.6",
