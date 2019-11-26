@@ -24,13 +24,15 @@ subWeapons:
   - name: ankhJewel:gateOfGuidance
   - name: pistol
     requirements:
-      - event:reachedBackDoorOfSurface, bomb
+      - event:reachedBackDoorOfSurface, bomb, bombAmmo
   - name: touken
   - name: ankhJewel:mausoleumOfTheGiants
   - name: ankhJewel:templeOfTheSun
   - name: ankhJewel:springInTheSky
     requirements:
       - scalesphere
+      - sacredOrb:2, helmet, spear
+      - sacredOrb:2, helmet, touken
   - name: flareGun
     requirements:
       - glove # super boring puzzle without gloves
