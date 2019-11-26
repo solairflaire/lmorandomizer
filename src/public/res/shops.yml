@@ -14,7 +14,7 @@
 # Temple of the Sun
 - names: toukenAmmo, spearAmmo, flareGunAmmo
   requirements:
-    - shuriken, shurikenAmmo
+    - shuriken
     - pistol, ammunition # pistol can reach
     - bomb, bombAmmo # bombs can reach
     - feather
