@@ -14,8 +14,8 @@ export default class FLAGS {
     public static GRAIL_SHR = 708;
     public static GRAIL_CON = 667;
     public static GRAIL_GRA = 668;
-    public static GRAIL_GOD = 669;
-    public static GRAIL_MOO = 670;
+    public static GRAIL_GOD = 670;
+    public static GRAIL_MOO = 669;
     public static GRAIL_RUI = 671;
     public static GRAIL_BIR = 672;
     public static GRAIL_TLB = 673;
