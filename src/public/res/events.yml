@@ -1,10 +1,33 @@
 # TODO: unsupported events
+- name: event:defeatedAmphisbaena
+  requirements:
+    - ankhJewel:gateOfGuidance
+- name: event:defeatedEllmac
+  requirements:
+    - ankhJewel:templeOfTheSun, sacredOrb:2
+- name: event:defeatedBahamut
+  requirements:
+    - event:floodedSpringInTheSky, ankhJewel:springInTheSky, event:subWeaponWallForward, helmet
+- name: event:defeatedViy
+  requirements:
+    - event:reachedFrontOfTowerOfRuin, spear, bronzeMirror, event:defeatedBahamut, ankhJewel:towerOfRuin, iceCape, sacredOrb:3
+    - event:reachedFrontOfTowerOfRuin, bomb, bombAmmo, bronzeMirror, event:defeatedBahamut, ankhJewel:towerOfRuin, iceCape, sacredOrb:3
+- name: event:defeatedPalenque
+  requirements:
+    - event:reachedPalenque, event:reachedUpperOfChamberOfBirth, event:lightedUpChamberOfExtinction, pochetteKey, ankhJewel:chamberOfBirth, sacredOrb:4, event:subWeaponWallForward
+- name: event:defeatedBaphomet
+  requirements:
+    - event:releasedTwins, flareGun, ankhJewel:twinLabyrinths, sacredOrb:4
+- name: event:defeatedTiamat
+  requirements:
+    - event:reachedDimensionalCorridor, ankhJewel:dimensionalCorridor, keySword, helmet, sacredOrb:4
+
 - name: event:qBert
   requirements:
     - event:reachedFrontOfGateOfIllusion, handScanner
 - name: event:miniDoll
   requirements:
-    - event:reachedFrontOfGateOfIllusion, event:reachedGrailOfGateOfIllusion, handScanner, glyphReader
+    - event:reachedGrailOfGateOfIllusion, handScanner, glyphReader
 - name: event:pepper
   requirements:
     - event:reachedFrontOfGateOfIllusion
@@ -14,7 +37,7 @@
 - name: event:mulanaTalisman
   requirements:
     - diary
-- name: event:subWeaponWallForward # some forward sub weapons for various things
+- name: event:subWeaponWallForward
   requirements:
     - shuriken
     - pistol, ammunition
@@ -23,10 +46,6 @@
 - name: event:reachedBackDoorOfSurface
   requirements:
     - event:defeatedPalenque # bronze mirror and feather included in defeated Palenque requirements
-
-- name: event:defeatedAmphisbaena
-  requirements:
-    - ankhJewel:gateOfGuidance
 
 - name: event:floodedTempleOfTheSun
   requirements:
@@ -45,44 +64,31 @@
     - helmet, originSeal, scalesphere
     - sacredOrb:8, helmet, originSeal
     - feather, grappleClaw, originSeal, scalesphere
-- name: event:defeatedBahamut
-  requirements:
-    - event:floodedSpringInTheSky, ankhJewel:springInTheSky, event:subWeaponWallForward # deleted event escapefromspringinthesky. added sub weapons
 
-- name: event:defeatedViy
-  requirements:
-    - event:reachedFrontOfTowerOfRuin, spear, bronzeMirror, event:defeatedBahamut, ankhJewel:towerOfRuin, iceCape, sacredOrb:3 # should have some health
-    - event:reachedFrontOfTowerOfRuin, bomb, bombAmmo, bronzeMirror, event:defeatedBahamut, ankhJewel:towerOfRuin, iceCape, sacredOrb:3 # can reach with bombs
-
-- name: event:reachedPalenque # this is to reach palenque, not fight him
+- name: event:reachedPalenque # this is to reach palenque area, not fight him
   requirements:
     - event:defeatedViy, feather
     - divinerSensation, event:qBert, msx2, feather, bronzeMirror
-- name: event:defeatedPalenque # added sub weapon and sacred orb requirements
-  requirements:
-    - event:reachedPalenque, event:reachedUpperOfChamberOfBirth, event:lightedUpChamberOfExtinction, pochetteKey, ankhJewel:chamberOfBirth, sacredOrb:4, event:subWeaponWallForward
 
 - name: event:releasedTwins
   requirements:
-    - ankhJewel:templeOfTheSun, twinStatue
-- name: event:defeatedBaphomet
-  requirements:
-    - event:releasedTwins, flareGun, ankhJewel:twinLabyrinths, sacredOrb:4 # with just flares, fight is insanely hard without some health
+    - event:defeatedEllmac, twinStatue
 
 - name: event:reachedFrontOfShrineOfTheMother
   requirements:
-    - keyOfEternity, handScanner, glyphReader, feather, spear, glove, dragonBone # boots not necessary
+    - keyOfEternity, handScanner, glyphReader, feather, spear, glove, dragonBone
+    - keyOfEternity, handScanner, glyphReader, feather, touken, glove, dragonBone
 
 - name: event:reachedFrontOfGateOfIllusion
   requirements:
     - event:reachedGrailOfTempleOfMoonlight
 - name: event:reachedElevatorOfGateOfIllusion
   requirements:
-    - event:anchor, knife # event anchor already includes getting to Illusion
+    - event:anchor, knife, sacredOrb:2
+    - event:anchor, knife, scalesphere # need to survive water to do anchor puzzle
 - name: event:reachedGrailOfGateOfIllusion
   requirements:
-    - event:reachedElevatorOfGateOfIllusion, sacredOrb:1 # need health to survive water
-    - event:reachedElevatorOfGateOfIllusion, scalesphere
+    - event:reachedElevatorOfGateOfIllusion
     # - event:reachedBackDoorOfGateOfIllusion # circular reference
 - name: event:reachedBackDoorOfGateOfIllusion
   requirements:
@@ -103,26 +109,26 @@
     - event:reachedFrontOfGraveyardOfTheGiants, bomb, bombAmmo, sacredOrb:3 # can open bomb wall from left side
 - name: event:reachedLiarOfGraveyardOfTheGiants
   requirements:
-    - event:reachedFrontOfGraveyardOfTheGiants, feather
     - event:reachedFrontOfGateOfIllusion
 
 - name: event:surviveAnubis # need to survive anubis
   requirements:
     - bookOfTheDead
     - sacredOrb:4
+- name: event:InsideMoonPyramid
+  requirements:
+    - flareGun, grappleClaw, holyGrail
+    - flareGun, feather, holyGrail
+    - flareGun, grappleClaw, bronzeMirror, ankhJewel:mausoleumOfTheGiants
 - name: event:reachedFrontOfTempleOfMoonlight
   requirements:
-    - ankhJewel:templeOfTheSun, bronzeMirror
+    - event:defeatedEllmac, bronzeMirror
 - name: event:reachedGrailOfTempleOfMoonlight
   requirements:
-    - event:reachedFrontOfTempleOfMoonlight, shuriken, shurikenAmmo
-    - flareGun, grappleClaw, event:escapeFromTempleOfMoonlight
-    - flareGun, feather, event:escapeFromTempleOfMoonlight
-- name: event:escapeFromTempleOfMoonlight
-  requirements:
-    - holyGrail
-    # - event:anchor, knife, bronzeMirror, ankhJewel:gateOfGuidance # circular reference
-    - bronzeMirror, ankhJewel:mausoleumOfTheGiants
+    - event:reachedFrontOfTempleOfMoonlight, shuriken
+    - event:InsideMoonPyramid
+    - event:releasedTwins
+    - event:reachedFrontOfGraveyardOfTheGiants, feather
 
 - name: event:reachedTowerOfTheGoddess
   requirements:
@@ -146,12 +152,9 @@
 - name: event:lightedUpChamberOfExtinction
   requirements:
     - event:reachedUpperOfChamberOfBirth, feather
-    - flareGun
+    - event:reachedUpperOfChamberOfBirth, holyGrail
 
 - name: event:reachedDimensionalCorridor
   requirements:
     - event:releasedTwins, crystalSkull, feather, bronzeMirror
     - event:releasedTwins, crystalSkull, boots, grappleClaw, bronzeMirror # can get in with boots and grapple claw
-- name: event:defeatedTiamat
-  requirements:
-    - event:reachedDimensionalCorridor, ankhJewel:dimensionalCorridor, keySword, sacredOrb:4 # added health requirement
