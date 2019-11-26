@@ -53,14 +53,15 @@ export default class Supplements {
     assert.deepEqual(
       this.chests.find(x => x.name === 'iceCape')!.requirements,
       [
-        ['ankhJewel:templeOfTheSun', 'bronzeMirror', 'shuriken', 'shurikenAmmo'],
-        ['holyGrail', 'flareGun', 'grappleClaw'],
+        ['ankhJewel:templeOfTheSun', 'sacredOrb:2', 'bronzeMirror', 'shuriken'],
+        ['flareGun', 'grappleClaw', 'holyGrail'],
         // tslint:disable-next-line:max-line-length
         // ['anchor', 'knife', 'bronzeMirror', 'ankhJewel:gateOfGuidance', 'flareGun', 'grappleClaw'],
-        ['bronzeMirror', 'ankhJewel:mausoleumOfTheGiants', 'flareGun', 'grappleClaw'],
-        ['holyGrail', 'flareGun', 'feather'],
+        ['flareGun', 'feather', 'holyGrail'],
+        ['flareGun', 'grappleClaw', 'bronzeMirror', 'ankhJewel:mausoleumOfTheGiants'],
         // ['anchor', 'knife', 'bronzeMirror', 'ankhJewel:gateOfGuidance', 'flareGun', 'feather'],
-        ['bronzeMirror', 'ankhJewel:mausoleumOfTheGiants', 'flareGun', 'feather'],
+        ['ankhJewel:templeOfTheSun', 'sacredOrb:2', 'twinStatue'],
+        ['bronzeMirror', 'ankhJewel:mausoleumOfTheGiants', 'feather']
       ],
     );
   }
