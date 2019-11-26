@@ -16,7 +16,7 @@
 - name: feather
   requirements:
     - serpentStaff, gauntlet
-    - serpentStaff, shuriken, shurikenAmmo
+    - serpentStaff, shuriken
     - serpentStaff, bomb, bombAmmo
     - serpentStaff, pistol, ammunition
     - serpentStaff, chainWhip
@@ -40,7 +40,7 @@
 # Temple of the Sun
 - name: bronzeMirror
   requirements:
-    - ankhJewel:templeOfTheSun, handScanner, glyphReader
+    - event:defeatedEllmac, handScanner, glyphReader
 - name: map:templeOfTheSun
 - name: talisman
   requirements:
@@ -55,7 +55,7 @@
 # Spring in the Sky
 - name: sacredOrb:springInTheSky
   requirements:
-    - birthSeal # life seal is from the remake
+    - birthSeal
 - name: glove
   requirements:
     - event:floodedSpringInTheSky
@@ -133,7 +133,7 @@
     - event:reachedFrontOfGateOfIllusion
 - name: cogOfTheSoul
   requirements:
-    - event:reachedBackDoorOfGateOfIllusion, event:reachedElevatorOfGateOfIllusion, lampOfTime, event:escapeShu # need to kill Shu to open chest
+    - event:reachedBackDoorOfGateOfIllusion, event:reachedElevatorOfGateOfIllusion, event:miniDoll, event:escapeShu, lampOfTime # need to kill Shu to open chest
 
 # Graveyard of the Giants
 - name: contra
@@ -163,7 +163,8 @@
     - event:reachedTowerOfTheGoddess # do not need feather
 - name: eyeOfTruth
   requirements:
-    - event:reachedLowerOfChamberOfBirth # need to reach entrance to lower birth to place weights
+    - event:reachedLowerOfChamberOfBirth, grappleClaw # need to reach entrance to lower birth to place weights
+    - event:reachedLowerOfChamberOfBirth, feather
 
 # Temple of Moonlight
 - name: bookOfTheDead
@@ -183,8 +184,7 @@
 # skip open from front
 - name: ocarina
   requirements:
-    - flareGun, womanStatue, feather, event:escapeFromTempleOfMoonlight # need a way out of moonlight
-    - flareGun, womanStatue, grappleClaw, event:escapeFromTempleOfMoonlight
+    - event:InsideMoonPyramid, womanStatue
 - name: serpentStaff
   requirements:
     - event:reachedFrontOfTempleOfMoonlight, grappleClaw
@@ -223,7 +223,7 @@
 # Dimensional Corridor
 - name: magatamaJewel
   requirements:
-    - event:defeatedTiamat, event:mulanaTalisman # need mulana talisman to get item
+    - event:defeatedTiamat, event:mulanaTalisman, lampOfTime # need mulana talisman to get item
 - name: sacredOrb:dimensionalCorridor
   requirements:
     - event:reachedDimensionalCorridor, feather, lampOfTime, sacredOrb:2 # do not need grapple claw. should have some health to beat bosses
