@@ -69,6 +69,7 @@ function getEquipmentPrice(
 		case equipmentNumbers.waterproofCase: return 80;
 		case equipmentNumbers.heatproofCase: return 100;
 		case equipmentNumbers.finder: return 80;
+		case equipmentNumbers.holyGrail: return 60;
 		case equipmentNumbers.lampOfTime: return 150;
 		case equipmentNumbers.protectiveClothes: return 300;
 		case equipmentNumbers.talisman: return 130;
